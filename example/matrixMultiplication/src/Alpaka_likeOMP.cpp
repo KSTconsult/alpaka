@@ -1,3 +1,4 @@
+// Copyright 2018 Tarakanov Kirill
 #include <chrono>
 #include <cmath>
 #include <alpaka/alpaka.hpp>
