@@ -49,6 +49,8 @@ INCLUDE("${ALPAKA_ROOT}cmake/dev.cmake")
 # Add executable.
 
 SET(_SOURCE_DIR "src/")
+SET(_INCLUDE_DIRECTORIES "include/")
+INCLUDE_DIRECTORIES(${_INCLUDE_DIRECTORIES})
 
 # Add all the source files in all recursive subdirectories and group them accordingly.
 append_recursive_files_add_to_src_group("${_SOURCE_DIR}" "${_SOURCE_DIR}" "cpp" _FILES_SOURCE)
@@ -66,9 +68,16 @@ IF(ALPAKA_ACC_GPU_CUDA_ENABLE AND NOT ALPAKA_CUDA_COMPILER MATCHES "clang")
 ENDIF()
 
 # Always add all files to the target executable build call to add them to the build project.
-ALPAKA_ADD_EXECUTABLE(
-    ${_TARGET_NAME}
-    ${_FILES_SOURCE})
+#ALPAKA_ADD_EXECUTABLE(
+#    ${_TARGET_NAME}
+#    ${_FILES_SOURCE
+file(GLOB HEADERS "${_INCLUDE_DIRECTORIES}/*.h")
+
+ADD_EXECUTABLE(
+	 ${_TARGET_NAME}
+	 ${HEADERS}
+     ${_FILES_SOURCE})
+	
 TARGET_COMPILE_OPTIONS(
     ${_TARGET_NAME}
     PRIVATE ${_COMPILE_OPTIONS_PRIVATE})

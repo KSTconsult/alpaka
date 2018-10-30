@@ -1,5 +1,5 @@
 #pragma once
-#include <iostream>
+#include "CheckResult.h"
 
 void Check(int numElements, double* memBufHostC, double* memBufHostC_OMP)
 {

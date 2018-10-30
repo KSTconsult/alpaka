@@ -1,5 +1,5 @@
 #pragma once
-#include <omp.h>
+#include "OMP_Multi.h"
 
 void Multi(double* A, double* B, double* C, int numElements)
 {
