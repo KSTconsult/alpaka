@@ -30,8 +30,13 @@ PROJECT("alpakaExamples")
 # Add subdirectories.
 ################################################################################
 
-ADD_SUBDIRECTORY("bufferCopy/")
-ADD_SUBDIRECTORY("helloWorld/")
-ADD_SUBDIRECTORY("helloWorldLambda/")
-ADD_SUBDIRECTORY("reduce/")
-ADD_SUBDIRECTORY("vectorAdd/")
+#ADD_SUBDIRECTORY("bufferCopy/")
+#ADD_SUBDIRECTORY("helloWorld/")
+#ADD_SUBDIRECTORY("helloWorldLambda/")
+#ADD_SUBDIRECTORY("reduce/")
+#ADD_SUBDIRECTORY("vectorAdd/")
+ADD_SUBDIRECTORY("matrixMultiplication/")
+ADD_SUBDIRECTORY("OMPmatrix/")
+ADD_SUBDIRECTORY("Block_Multi/")
+ADD_SUBDIRECTORY("Alpakablock/")
+

@@ -23,6 +23,7 @@
 
 cmake_minimum_required(VERSION 3.7.0)
 
+SET(CMAKE_CONFIGURATION_TYPES ${CMAKE_BUILD_TYPE} CACHE STRING "" FORCE)
 project("alpakaAll")
 
 SET_PROPERTY(GLOBAL PROPERTY USE_FOLDERS ON)
@@ -41,6 +42,6 @@ include(CTest)
 if(alpaka_BUILD_EXAMPLES)
     add_subdirectory("example/")
 endif()
-if(BUILD_TESTING)
-    add_subdirectory("test/")
-endif()
+#if(BUILD_TESTING)
+ #   add_subdirectory("test/")
+#endif()
